@@ -13,7 +13,7 @@ Buon pomeriggio e buon lavoro !!!! :muscolo:
 
 
 /*
-creaoi un array 
+creo un array 
 stampo 5 numeri casuali non duplicati 
 e li inserisco in un box per 30 secondi
 prendi i numeri dell' utente 
@@ -23,5 +23,43 @@ in un altro  e a seconda della lunghezza di esso uscirà lo score
 */
 
 
-
+const button=document.querySelector('.btn-success');
+button.addEventListener('click', function(){
+    let number=randomnumber()
+},{once:true});  
  
+
+
+function randomnumber(){
+    let number=[]
+    let boxes
+    const stcontainer=document.querySelector('.st-concatiner')
+    while(number.length<5){ 
+        let random=getRndInteger(1,100)
+        if(!number.includes(random)){
+            number.push(random)
+            boxes=document.createElement('div')
+            boxes.classList.add('box')
+            boxes.innerHTML=`${random}`
+            stcontainer.append(boxes)
+        }
+    }
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+}

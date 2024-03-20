@@ -6,6 +6,15 @@
 }
 
 .st-container{
-    width: 1200px;
+    width: 600px;
+    height: 600px;
     margin: 0 auto;
+}
+
+.box{
+    width: calc(100% / 5);
+    border: 1px solid black;
+}
+.prova{
+    display: none;
 }
