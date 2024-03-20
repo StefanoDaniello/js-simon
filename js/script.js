@@ -27,7 +27,7 @@ const button=document.querySelector('.btn-success');
 button.addEventListener('click', function(){
     // let number=randomnumber()
     setInterval(randomnumber(),{
-        
+       stcontainer.classList.add('prova'),
     }
     ,30000);
 },{once:true});  
@@ -49,7 +49,6 @@ function randomnumber(){
         }
     }
 
-    return stcontainer
 }
 
 
