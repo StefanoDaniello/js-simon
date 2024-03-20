@@ -25,11 +25,9 @@ in un altro  e a seconda della lunghezza di esso uscirà lo score
 
 const button=document.querySelector('.btn-success');
 button.addEventListener('click', function(){
-    // let number=randomnumber()
-    setInterval(randomnumber(),{
-       stcontainer.classList.add('prova'),
-    }
-    ,30000);
+    
+    let prova = randomnumber()
+    setTimeout(myFunction(prova),30000000000)
 },{once:true});  
  
 
@@ -48,9 +46,12 @@ function randomnumber(){
             stcontainer.append(boxes)
         }
     }
-
+    return stcontainer
 }
 
+function myFunction(div){
+    div.innerHTML=''
+}
 
 
 
