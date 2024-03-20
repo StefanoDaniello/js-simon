@@ -25,7 +25,11 @@ in un altro  e a seconda della lunghezza di esso uscirà lo score
 
 const button=document.querySelector('.btn-success');
 button.addEventListener('click', function(){
-    let number=randomnumber()
+    // let number=randomnumber()
+    setInterval(randomnumber(),{
+        
+    }
+    ,30000);
 },{once:true});  
  
 
@@ -45,8 +49,9 @@ function randomnumber(){
         }
     }
 
-    
+    return stcontainer
 }
+
 
 
 
