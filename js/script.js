@@ -23,6 +23,11 @@
 // */
 
 
+
+
+/* da rifare sabato  o domanica cose da fare:
+*/
+
 const userNumber=document.getElementById('userNumber').value
 
 
@@ -62,8 +67,8 @@ function randomnumber(){
 }
 
 function user(){
-    const userNumber=document.getElementById('userNumber').value
-    userNumber.value=""
+    const userNumber=parseInt(document.getElementById('userNumber').value);
+    document.getElementById('userNumber').value=''
     let number=randomnumber()
     let userarray=[]
     let correctNumber=[]
@@ -73,7 +78,7 @@ function user(){
             correctNumber.push(userNumber)
         }
     }
-    console.log(number)
+    console.log(correctNumber)
 }
 
 
