@@ -34,12 +34,13 @@ const userNumber=document.getElementById('userNumber').value
 const button=document.querySelector('.btn-success');
 button.addEventListener('click', function(){  
     randomnumber()
+    avvia()
 },{once:true});  
  
 
 const verifica=document.querySelector('.btn-info');
 verifica.addEventListener('click', function(){  
-    user()
+    user()       
 }); 
 
 
@@ -57,13 +58,12 @@ function randomnumber(){
             boxes.innerHTML=`${random}`
             stcontainer.append(boxes)     
             setTimeout(function() {   
-                boxes.style.display = "none";          
-            }, 3000); // Nasconde i numeri dopo 30 secondi    
+                boxes.style.display = "none";         
+            }, 30000); // Nasconde i numeri dopo 30 secondi    
         }
     } 
     return number
 
-   
 }
 
 function user(){
@@ -84,37 +84,30 @@ function user(){
 
 
 
- function getRndInteger(min, max) {
+function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
- }
+}
 
 
-
-
-
-
-
-
-    // function avvia(){
-    //     //prende, come intero, il numero inserito dall'utente nella casella
-    //     let temporimasto = 5;
-    //     // parseInt(document.getElementById("input1").value);
-    //     //avvio una funzione mytimer che si esegue ogni 1000 millisecondi
-    //     let mytimer = setInterval(function() {
-    //     //decrementa il tempo rimasto di 1
-    //     temporimasto--;
-    //     //aggiorna il valore nella sezione HTML
-    //     document.getElementById("contatore").innerHTML = temporimasto;
-    //         //se il tempo è finito scrivo Fatto! e faccio terminare la funzione
-    //         if (temporimasto <= 0) {
-    //         //   document.getElementById("contatore").innerHTML = "Fatto!";
-    //         randomnumber().innerHTML=''
-    //           clearInterval(mytimer);
-    //         }
-    //         //altrimenti quando saranno passati 1000 ms, sarà fatta una nuova esecuzione della funzione
-    //         //e si otterrà in questo modo l'effetto countdown
-    //     },1000);
-    // }
+function avvia(){
+    //prende, come intero, il numero inserito dall'utente nella casella
+    let temporimasto = 30;
+    // parseInt(document.getElementById("input1").value);
+    //avvio una funzione mytimer che si esegue ogni 1000 millisecondi
+    let mytimer = setInterval(function() {
+    //decrementa il tempo rimasto di 1
+    temporimasto--;
+    //aggiorna il valore nella sezione HTML
+    document.getElementById("contatore").innerHTML = temporimasto;
+    //se il tempo è finito scrivo Fatto! e faccio terminare la funzione
+    if (temporimasto <= 0) {
+    document.getElementById("contatore").innerHTML = "Indovina!";
+    clearInterval(mytimer);
+    }
+    //altrimenti quando saranno passati 1000 ms, sarà fatta una nuova esecuzione della funzione
+    //e si otterrà in questo modo l'effetto countdown
+},1000);
+}
 
 
 
